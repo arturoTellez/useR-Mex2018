@@ -64,7 +64,7 @@ for(i_renglon in 1:nrow(tabla_parametros_formulario)){
 
 			pie_tabla <- html_text(html_nodes(pagina_html,'.textoTablaPie'))
 			tabla_final[11:(nrow(tabla_final) - 1),] <- tabla_datos
-			tabla_final[nrow(tabla_final), 1] <- pie_tabla
+			tabla_final[nrow(tabla_final), 1] <- pie_tabla[1]
 
 			tabla_final <- apply(tabla_final, c(1,2), gsub, pattern = "\n", replacement = "")
 
